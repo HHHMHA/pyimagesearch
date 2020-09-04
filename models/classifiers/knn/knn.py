@@ -35,4 +35,5 @@ train_X, test_X, train_y, test_y = train_test_split(data, labels, test_size=0.2)
 # Evaluating the Model
 model = KNeighborsClassifier(n_neighbors=args['neighbours'], metric='cosine', algorithm='brute', n_jobs=args['jobs'])
 model.fit(train_X, train_y)
-print(classification_report(test_y, model.predict(test_X), labels=label_encoder.classes_))
+pred_y = model.predict(test_X)
+print(classification_report(test_y, pred_y, target_names=label_encoder.classes_))
