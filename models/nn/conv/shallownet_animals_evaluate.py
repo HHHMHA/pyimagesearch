@@ -36,5 +36,5 @@ preds = model.predict(data, batch_size=32).argmax(axis=1)
 for i, image_path in enumerate(image_paths):
     image = cv2.imread(image_path)
     cv2.putText(image, f"Label {class_labels[preds[i]]}", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
-    cv2.imshow(image)
+    cv2.imshow("image", image)
     cv2.waitKey(0)
