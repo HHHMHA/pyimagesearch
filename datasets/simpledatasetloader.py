@@ -25,7 +25,7 @@ def try_print_progress(progress: int, goal: int, verbose: int) -> None:
     :param verbose: Interval between prints
     """
     if verbose > 0 and progress > 0 and (progress + 1) % verbose == 0:
-        print(f'[INFO] processed {progress + 1}/{goal}')
+        print(f"[INFO] processed {progress + 1}/{goal}")
 
 
 class SimpleDatasetLoader:
